@@ -1,7 +1,18 @@
 # **Obsidian Image Tool**
 
 ## linking 397 files in 5 seconds
-![aharoJ](z/aharoJ.png)
+
+> options 
+
+![alt text](<z/options.png>)
+
+> un-link
+
+![alt text](z/unlink.png)
+
+> link 
+> 
+![alt text](z/link.png)
 
 ### Author
 -  This tool was developed and is maintained by [Angel Jair Haro](https://www.aharoj.io)
