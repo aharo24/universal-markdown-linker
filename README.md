@@ -4,7 +4,7 @@
 ![aharoJ](z/aharoJ.png)
 
 ### Author
--  This tool was developed and is maintained by [Angel Haro](https://www.linkedin.com/in/aharoJ/)
+-  This tool was developed and is maintained by [Angel Haro](https://www.aharoj.io)
 
 ## **Description**
 
