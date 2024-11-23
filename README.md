@@ -121,13 +121,3 @@ A command-line tool for adjusting image links in Obsidian markdown files for com
 - Your feedback is valuable and helps improve the tool.
 
 ---
-
-## **Final Thoughts**
-
-By updating the README and license information, you're clearly communicating how others can use your tool while retaining control over your source code. If you decide in the future to adjust the licensing terms or open-source the project, you can update the README accordingly.
-
----
-
-**Let me know if there's anything else you'd like to adjust or if you have further questions!**
-
----
