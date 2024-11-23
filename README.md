@@ -13,7 +13,7 @@ A command-line tool for adjusting image links in Obsidian markdown files for com
 
 ### **Prerequisites**
 
-- **Operating System:** macOS (tested on macOS 13.4 or later) && Linux OS
+- **Operating System:** macOS  && Linux OS
 - **Executable File:** `obsidian_image_tool` 
 
 ### **Setup and Execution**
