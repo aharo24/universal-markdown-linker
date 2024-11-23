@@ -1,7 +1,5 @@
 # **Obsidian Image Tool**
 
-## linking 397 files in 5 seconds
-
 > options 
 
 ![alt text](<z/options.png>)
