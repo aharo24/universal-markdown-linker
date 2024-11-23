@@ -101,9 +101,9 @@ A command-line tool for adjusting image links in Obsidian markdown files for com
 
 ## **Contact Information**
 
-- **Author:** [Angel Jair Haro]
-- **Email:** [angel@aharoj.io]
-- **Website:** [[Your Website or GitHub Profile]](https://www.aharoj.io)
+- **Author:** Angel Jair Haro
+- **Email:** angel@aharoj.io
+- **Website:** ![PORTFOLIO](https://www.aharoj.io)
 
 ---
 
