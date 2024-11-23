@@ -1,101 +1,133 @@
-<h1 align="center"><b> Angel J. Haro 
-<img src="https://docs.google.com/uc?export=download&id=1JqFc6WL-cTtJBQgW9tusQAZhQ3H9hGae" alt="" height="25" >
-<img src="https://docs.google.com/uc?export=download&id=1HsBpakQVutfOmxBcPbGpKdo_oGEoKJZT" alt="" height="35" >
-</h1>
+# **Obsidian Image Tool**
 
-<!-- START  -->
-<div align="center">
-<a href="https://aharoj.io"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=Portfolio&logoColor=white" alt="Gmail" /></a>&nbsp;
-<a href="https://discord.gg/HDDQ6pUMHt"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>&nbsp;
-<a href="https://twitter.com/aharoJ"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" /></a>&nbsp;
-<a href="https://www.linkedin.com/in/aharoJ/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" /></a>&nbsp;
-<a href="https://leetcode.com/aharoJ/"><img src="https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black" alt="LeetCode" /></a>&nbsp;
-<br/>
-</div>  
-<!-- END -->
+## **Description**
 
-<h1 align="center"> <a href=https://aharoj.io> Visit Portfolio </a> </h1>
+A command-line tool for adjusting image links in Obsidian markdown files for compatibility with GitHub repositories.
 
+- **Clean:** Converts relative image links to direct links for local use.
+- **Link:** Modifies image links to use relative paths suitable for GitHub.
 
+---
 
+## **Usage Instructions**
 
-# Universal Markdown Linker
-I'm excited to announce the release of my open-source tool, Universal Markdown Linker! As the founder and solo developer, I've poured countless hours into creating a reliable and efficient tool that makes linking markdown without the struggle of manually linking the files path manually. With over 1,500 lines of code and countless hours of testing, I've made sure that this script is stable and ready for use. Actively developing new features such as adding CLI support, dry run option, and progress bar. Also, planned features such as error handling, command line argument parser, and backup options.v Not only do I believe in the power of open-source, but I also believe in giving back to the community. I hope that my tool can make a positive impact and save others time and energy. Feel free to reach out to me with any questions, improvements, or just to chat.
+### **Prerequisites**
 
-#### linking 96 files in 5 seconds
-![aharoJ](z/aharoJ.png)
-### Author
--  This tool was developed and is maintained by [Angel Haro](https://www.linkedin.com/in/aharo24/), the founder of Universal Markdown Linker."
+- **Operating System:** macOS (tested on macOS 13.4 or later) && Linux OS
+- **Executable File:** `obsidian_image_tool` 
 
-## Supported apps
+### **Setup and Execution**
 
--   Obsidian
--   Evernote
--   OneNote
--   Notion
--   Typora
--   Turtl
--   ZimWiki
--   Standard Notes
--   Joplin
--   Boostnote
--   Simplenote
--   Laverna
--   Joplin
--   Bear
--   Turtl
--   Joplin
--   Simplenote
--   Standard Notes
--   Zim
--   JotterPad
--   nvAlt
--   Roam Research
--   Simplenote
--   Standard Notes
+1. **Place the Executable in Your Workspace Root**
 
+   - Copy the `obsidian_image_tool` executable to the root directory of your workspace containing your Obsidian markdown files.
 
-## Features
-#### Actively developing
--   Adding CLI support
--   Add a progress bar to show the user the progress of the script.
--   An option to dry run the script without making any changes to the files.
--   An option to check the number of changes made to the files.
+2. **Make the Executable Runnable**
 
+   ```bash
+   chmod +x obsidian_image_tool
+   ```
 
-#### Planned features 
--   Error handling to handle cases where the input files are not found or are not in the expected format.
--   A command line argument parser to make it easy for the user to specify the input and output directories.
--   An option to backup the original files before modifying them.
--   A progress bar to show the user the progress of the script.
--   An option to recursively search for files only in specific subdirectories.
--   An option to only search for specific file types other than .md
--   An option to search for a different pattern other than `![](../z/file_name.png)`
--   An option to specify the new_path in the replacement, instead of calculating it in the script.
+3. **Run the Tool**
 
+   ```bash
+   ./obsidian_image_tool
+   ```
 
+4. **Select an Option**
 
+   ```
+   Select an option:
+   [1] Clean
+   [2] Link
+   [q] Quit
+   Enter your choice:
+   ```
 
+   - **[1] Clean:** Removes relative paths from image links for local use.
+   - **[2] Link:** Adds relative paths to image links for GitHub compatibility.
+   - **[q] Quit:** Exits the program.
 
+5. **Wait for the Operation to Complete**
 
+   - The tool will process all `.md` files in your workspace and subdirectories.
+   - Upon completion, you'll see a confirmation message.
 
+6. **Repeat or Quit**
 
-## Requirements
--   Python 3
--  ... (in progress)
+   - After each operation, the menu reappears.
+   - Perform additional operations or press `q` to quit.
 
-## Installs
-...(in progress)
+---
 
+## **Important Notes**
 
+- **Workspace Directory:**
+  - The tool must be placed and run from the root directory of your workspace.
+  - It operates on the current working directory.
 
-## Developer Notes on Script Functionality
+- **Permissions:**
+  - Ensure you have read and write permissions for all files in your workspace.
+  - Use `chmod +x obsidian_image_tool` to make the executable runnable.
 
--   The script starts by setting the "workspace_root" variable to the current working directory, and then sets the "base_dir" variable to "." and the "attachment_dir" variable to "z".
--   It then uses the `os.walk` function to recursively search for .md files in all subdirectories
--   For each file it opens it in read mode and reads the contents into a string.
--   Then the script uses a regular expression to find all instances of the pattern `![](file_name)` in the contents of the file.
--   After that it iterates through the matches and replaces them with the desired pattern `![](z/file_name)` by adding the relative path to the attachment directory to the front of the file name.
--   Finally, it opens the file in write mode and writes the modified contents back to the input file.
+- **Backup:**
+  - It's recommended to backup your workspace before running the tool, as it modifies files in place.
+
+- **Attachment Directory:**
+  - The tool assumes images are stored in a directory named `z`.
+  - If your attachment directory has a different name, please contact the author.
+
+- **Feedback:**
+  - If you prefer to specify a full path instead of placing the executable in the working directory, feel free to reach out with your suggestions.
+
+---
+
+## **License**
+
+**Obsidian Image Tool** is provided under a **Source-Available License**.
+
+- **Usage:** Permitted for personal, non-commercial purposes.
+- **Modification:** Not allowed.
+- **Commercial Use:** Strictly prohibited.
 
 
+---
+
+## **Contributing**
+
+- For suggestions or feedback, please contact me.
+
+---
+
+## **Contact Information**
+
+- **Author:** [Angel Jair Haro]
+- **Email:** [angel@aharoj.io]
+- **Website:** [[Your Website or GitHub Profile]](https://www.aharoj.io)
+
+---
+
+## **Disclaimer**
+
+- **No Warranty:** This tool is provided "as is" without any warranties.
+- **Limitation of Liability:** The author is not liable for any damages arising from the use of this tool.
+- **Use at Your Own Risk:** Users assume all risks associated with using this tool.
+
+---
+
+## **Acknowledgments**
+
+- Thank you for using the Obsidian Image Tool.
+- Your feedback is valuable and helps improve the tool.
+
+---
+
+## **Final Thoughts**
+
+By updating the README and license information, you're clearly communicating how others can use your tool while retaining control over your source code. If you decide in the future to adjust the licensing terms or open-source the project, you can update the README accordingly.
+
+---
+
+**Let me know if there's anything else you'd like to adjust or if you have further questions!**
+
+---
