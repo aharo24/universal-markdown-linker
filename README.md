@@ -103,7 +103,7 @@ A command-line tool for adjusting image links in Obsidian markdown files for com
 
 - **Author:** Angel Jair Haro
 - **Email:** angel@aharoj.io
-- **Website:** ![PORTFOLIO](https://www.aharoj.io)
+- **Website:** [PORTFOLIO](https://www.aharoj.io)
 
 ---
 
