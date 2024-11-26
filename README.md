@@ -68,7 +68,7 @@ Select an option:
 
 ### Before:
 ```markdown
-![Diagram](../../attachments/diagram.png)
+![Diagram](../../../../attachments/diagram.png)
 ![Alt Text](../z/image with spaces.png)
 ```
 
