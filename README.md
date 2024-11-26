@@ -94,8 +94,7 @@ Contributions are welcome! If you have ideas for new features or improvements, f
 
 ## 👨‍💻 Author
 
-- **Angel J. Haro**  
-  - [Portfolio](https://aharoj.io)  
+- [Angel J. Haro](https://aharoj.io)  
 
 
 
