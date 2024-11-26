@@ -68,20 +68,20 @@ Select an option:
 
 ### Before:
 ```markdown
-![Alt Text](z/image%2520with%2520spaces.png)
-![](z/diagram.png)
+![Diagram](../../attachments/diagram.png)
+![Alt Text](../z/image with spaces.png)
 ```
 
 ### After (Clean Operation):
 ```markdown
-![Alt Text](z/image%2520with%2520spaces.png)
-![](z/diagram.png)
+![Diagram](diagram.png)
+![Alt Text](image%20with%20spaces.png)
 ```
 
 ### After (Link Operation):
 ```markdown
-![Alt Text](z/image%2520with%2520spaces.png)
-![](z/diagram.png)
+![Diagram](../z/diagram.png)
+![Alt Text](../z/image%20with%20spaces.png)
 ```
 
 ---
