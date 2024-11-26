@@ -1,4 +1,105 @@
-# **Obsidian Image Tool**
+# **Universal Markdown Linker for GITHUB**
+
+**MarkdownImageLinker** is a Python tool designed to simplify and manage image links in markdown files. It automatically fixes relative paths, handles file movements or renaming, and ensures your markdown images remain viewable, regardless of how your directories or files are structured. Perfect for GitHub documentation, note-taking apps like Obsidian, or any markdown-based workflows.
+
+## 🚀 Features
+
+- **Dynamic Path Adjustment**: Automatically updates image paths when markdown files or attachments are moved, renamed, or nested in subdirectories.  
+- **Dual Operations**:
+  - **Clean**: Simplifies image paths into viewable URLs, handling URL encoding for filenames with spaces or special characters.
+  - **Link**: Reattaches valid paths for images located in a designated attachment directory, ensuring seamless previews.  
+- **Alt Text Support**: Handles image links with or without alt text, preserving metadata and annotations.  
+- **Recursive Directory Traversal**: Processes all markdown files in the workspace, including deeply nested subdirectories.  
+- **Cross-App Compatibility**: Tested and compatible with markdown-based apps like Obsidian, Typora, and GitHub.  
+
+## 🛠 How It Works
+
+MarkdownImageLinker scans your workspace, identifies image links, and ensures all paths are valid and consistent. It uses Python's `os` and `re` modules for file handling and regex-based pattern matching.
+
+### Workflow:
+1. **Clean**: Simplifies complex relative links (e.g., `../../attachments/image.png`) into clean, encoded paths.
+2. **Link**: Updates paths to point to a centralized attachment directory, ensuring accurate references even after file reorganizations.
+
+---
+
+## 🛠 Installation 
+
+> You’ll need to clone the repository and execute the prebuilt binary file. 
+
+Here’s how:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/aharoJ/MarkdownImageLinker.git
+   cd MarkdownImageLinker
+   ```
+
+2. Grant execute permissions to the binary:
+   ```bash
+   chmod +x link
+   ```
+
+3. Run the tool:
+   ```bash
+   ./link
+   ```
+
+
+---
+
+## 📖 Usage
+
+Run the script and choose an option:
+
+```plaintext
+Select an option:
+[1] Clean
+[2] Link
+[q] Quit
+```
+
+- **[1] Clean**: Simplifies and sanitizes image paths for readability and compatibility.  
+- **[2] Link**: Adjusts image paths to reference a centralized `attachments` directory.  
+- **[q] Quit**: Exits the tool.
+
+---
+
+## 📝 Examples
+
+### Before:
+```markdown
+![Alt Text](z/image%2520with%2520spaces.png)
+![](z/diagram.png)
+```
+
+### After (Clean Operation):
+```markdown
+![Alt Text](z/image%2520with%2520spaces.png)
+![](z/diagram.png)
+```
+
+### After (Link Operation):
+```markdown
+![Alt Text](z/image%2520with%2520spaces.png)
+![](z/diagram.png)
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request.
+
+---
+
+## 👨‍💻 Author
+
+- **Angel J. Haro**  
+  - [Portfolio](https://aharoj.io)  
+
+
+
+## Images 
 
 > options 
 
@@ -9,130 +110,5 @@
 ![alt text](z/unlink.png)
 
 > link 
-> 
+
 ![alt text](z/link.png)
-
-### Author
--  This tool was developed and is maintained by [Angel Jair Haro](https://www.aharoj.io)
-
-## **Description**
-
-A command-line tool for adjusting image links in Obsidian markdown files for compatibility with GitHub repositories.
-
-- **Clean:** Converts relative image links to direct links for local use.
-- **Link:** Modifies image links to use relative paths suitable for GitHub.
-
----
-
-## **Usage Instructions**
-
-### **Prerequisites**
-
-- **Operating System:** macOS  && Linux OS
-- **Executable File:** `obsidian_image_tool` 
-
-### **Setup and Execution**
-
-1. **Place the Executable in Your Workspace Root**
-
-   - Copy the `obsidian_image_tool` executable to the root directory of your workspace containing your Obsidian markdown files.
-
-2. **Make the Executable Runnable**
-
-   ```bash
-   chmod +x obsidian_image_tool
-   ```
-
-3. **Run the Tool**
-
-   ```bash
-   ./obsidian_image_tool
-   ```
-
-4. **Select an Option**
-
-   ```
-   Select an option:
-   [1] Clean
-   [2] Link
-   [q] Quit
-   Enter your choice:
-   ```
-
-   - **[1] Clean:** Removes relative paths from image links for local use.
-   - **[2] Link:** Adds relative paths to image links for GitHub compatibility.
-   - **[q] Quit:** Exits the program.
-
-5. **Wait for the Operation to Complete**
-
-   - The tool will process all `.md` files in your workspace and subdirectories.
-   - Upon completion, you'll see a confirmation message.
-
-6. **Repeat or Quit**
-
-   - After each operation, the menu reappears.
-   - Perform additional operations or press `q` to quit.
-
----
-
-## **Important Notes**
-
-- **Workspace Directory:**
-  - The tool must be placed and run from the root directory of your workspace.
-  - It operates on the current working directory.
-
-- **Permissions:**
-  - Ensure you have read and write permissions for all files in your workspace.
-  - Use `chmod +x obsidian_image_tool` to make the executable runnable.
-
-- **Backup:**
-  - It's recommended to backup your workspace before running the tool, as it modifies files in place.
-
-- **Attachment Directory:**
-  - The tool assumes images are stored in a directory named `z`.
-  - If your attachment directory has a different name, please contact the author.
-
-- **Feedback:**
-  - If you prefer to specify a full path instead of placing the executable in the working directory, feel free to reach out with your suggestions.
-
----
-
-## **License**
-
-**Obsidian Image Tool** is provided under a **Source-Available License**.
-
-- **Usage:** Permitted for personal, non-commercial purposes.
-- **Modification:** Not allowed.
-- **Commercial Use:** Strictly prohibited.
-
-
----
-
-## **Contributing**
-
-- For suggestions or feedback, please contact me.
-
----
-
-## **Contact Information**
-
-- **Author:** Angel Jair Haro
-- **Email:** angel@aharoj.io
-- **Website:** [PORTFOLIO](https://www.aharoj.io)
-
----
-
-## **Disclaimer**
-
-- **No Warranty:** This tool is provided "as is" without any warranties.
-- **Limitation of Liability:** The author is not liable for any damages arising from the use of this tool.
-- **Use at Your Own Risk:** Users assume all risks associated with using this tool.
-
----
-
-## **Acknowledgments**
-
-- Thank you for using the Obsidian Image Tool.
-- Your feedback is valuable and helps improve the tool.
-
----
