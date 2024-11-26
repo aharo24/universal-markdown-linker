@@ -14,7 +14,7 @@ link_fixer.py
 archive/
 link.py
 unlink.py
-
+obsidian_image_tool.py
 
 ######          Ignore below                #######
 # Byte-compiled / optimized / DLL files
